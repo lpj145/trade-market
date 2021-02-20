@@ -32,3 +32,6 @@ Para equalizar as coisas e melhorar o sentido, a partir daqui chamaremos:
 #### INTERESSADO
 - [ ] REGISTRAR na carteira o dinheiro que possuí disponivel.
 - [ ] REGISTRAR por meio de um canal de interesse uma intenção.
+
+### Cenário final:
+Quando o cli estiver pronto, ele deve ser capaz de gerar interessados, ações e executar as intenções sozinho, e mostrando o resultado após alguma determinada condição que irei pensar.
