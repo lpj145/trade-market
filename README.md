@@ -30,7 +30,7 @@ Para equalizar as coisas e melhorar o sentido, a partir daqui chamaremos:
 - [ ] Mostrar pro público a consolidação da realização das intenções dos interessados, quanto ele tem, quais ações tem e quanto tem em dinheiro.
 
 #### INTERESSADO
-- [ ] REGISTRAR na carteira o dinheiro que possuí disponivel.
+- [X] REGISTRAR na carteira o dinheiro que possuí disponivel.
 - [ ] REGISTRAR por meio de um canal de interesse uma intenção.
 
 ### Cenário final:
