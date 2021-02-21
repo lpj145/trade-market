@@ -3,13 +3,18 @@ mod domains;
 use domains::{
     broker::Broker,
     stock::Stock,
+    channel::Channel,
     interested::Interested,
+    enums::INTENTION_TYPES,
     broker_details::BrokerDetails
 };
 
 fn main() {
     let mut broker = Broker::new();
+
     broker
+        .add_channel(Channel::new("Comprar Ações".to_string(), INTENTION_TYPES::BUY_STOCK))
+        .add_channel(Channel::new("Vender Ações".to_string(), INTENTION_TYPES::SELL_STOCK))
         .add_stock_list(vec![
             Stock::new("MGLU3".to_string(), 24.94, 500),
             Stock::new("PCAR3".to_string(), 64.75, 200),
