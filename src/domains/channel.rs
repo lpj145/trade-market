@@ -1,11 +1,11 @@
-use super::enums::INTENTION_TYPES;
+use super::enums::IntentionTypes;
 pub struct Channel {
-    r#type: INTENTION_TYPES,
+    r#type: IntentionTypes,
     pub name: String
 }
 
 impl Channel {
-    pub fn new(name: String, r#type: INTENTION_TYPES) -> Self {
+    pub fn new(name: String, r#type: IntentionTypes) -> Self {
         Channel {
             r#type,
             name

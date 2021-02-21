@@ -1,4 +1,4 @@
-pub enum INTENTION_TYPES {
-    BUY_STOCK,
-    SELL_STOCK
+pub enum IntentionTypes {
+    BuyStock,
+    SellStock
 }
