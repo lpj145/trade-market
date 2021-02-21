@@ -22,10 +22,10 @@ Para equalizar as coisas e melhorar o sentido, a partir daqui chamaremos:
 #### BROKER
 - [X] REGISTRAR interessados em participar do mercado.
 - [X] REGISTRAR ações, ou colocar no "deposito" cada uma delas caracterizada por: nome, valor e quantidade.
-- [ ] REGISTRAR intenções dos interessados.
+- [X] REGISTRAR intenções dos interessados.
 - [X] REGISTRAR canais de interação com ações que são limitados adois tipos: COMPRA e VENDA.
 - [X] GERAR número incremental da intenção, para que todas elas tenham ordem de interesse (quem fez primeiro).
-- [ ] EXECUTAR inteções quando as condições fizerem sentido.
+- [ ] EXECUTAR intenções quando as condições fizerem sentido.
 - [ ] Mostrar pro público a consolidação do resultado das intenções olhando para ações, quanto tem em ações guardado, qual valor.
 - [ ] Mostrar pro público a consolidação da realização das intenções dos interessados, quanto ele tem, quais ações tem e quanto tem em dinheiro.
 
