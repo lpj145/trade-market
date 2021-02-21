@@ -1,9 +1,10 @@
-use super::{stock::Stock, interested::Interested};
+use super::{channel::{self, Channel}, interested::Interested, stock::Stock};
 use std::collections::HashMap;
 
 pub struct Broker {
     pub intention_id: u32,
     stocks: HashMap<String, Stock>,
+    channels: HashMap<String, Channel>,
     interested: Vec<Interested>
 }
 
@@ -19,8 +20,14 @@ impl Broker {
         Broker {
             intention_id: 0,
             stocks: HashMap::new(),
+            channels: HashMap::new(),
             interested: Vec::new()
         }
+    }
+
+    pub fn add_channel(&mut self, channel: Channel) -> &mut Self {
+        self.channels.insert(channel.name.to_string(), channel);
+        self
     }
 
     // Add list of stocks to broker
