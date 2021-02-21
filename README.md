@@ -21,7 +21,7 @@ Para equalizar as coisas e melhorar o sentido, a partir daqui chamaremos:
 
 #### BROKER
 - [ ] REGISTRAR interessados em participar do mercado.
-- [ ] REGISTRAR ações, ou colocar no "deposito" cada uma delas caracterizada por: nome, valor e quantidade.
+- [X] REGISTRAR ações, ou colocar no "deposito" cada uma delas caracterizada por: nome, valor e quantidade.
 - [ ] REGISTRAR intenções dos interessados.
 - [ ] REGISTRAR canais de interação com ações que são limitados adois tipos: COMPRA e VENDA.
 - [ ] GERAR número incremental da intenção, para que todas elastenham ordem de interesse (quem fez primeiro).
