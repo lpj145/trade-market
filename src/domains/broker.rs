@@ -1,53 +1,53 @@
-use super::{display::Display, stock::Stock};
+use super::{stock::Stock, interested::Interested};
 use std::collections::HashMap;
 
 pub struct Broker {
+    pub intention_id: u32,
     stocks: HashMap<String, Stock>,
-    display: Display,
+    interested: Vec<Interested>
+}
+
+struct BrokerDetails {
+    pub price: f32,
+    pub stocks: u32,
+    pub interested: u32,
+    pub intentions: u32,
 }
 
 impl Broker {
     pub fn new () -> Self {
         Broker {
+            intention_id: 0,
             stocks: HashMap::new(),
-            display: Display::new()
+            interested: Vec::new()
         }
     }
 
     // Add list of stocks to broker
     pub fn add_stock_list(&mut self, stocks: Vec<Stock>) -> &mut Self {
-        let stocks_qty = stocks.len();
         for stock in stocks {
             self.stocks.insert(stock.name.to_string(), stock);
         }
-        self.display.message(format!("Registered {} stocks", stocks_qty));
         self
     }
 
-    // Add one stock to broker
-    pub fn add_stock(&mut self, stock: Stock) -> &mut Self {
-        self.stocks.insert(stock.name.to_string(), stock);
+    pub fn add_interested_list(&mut self, interested_list: Vec<Interested>) -> &mut Self {
+        for interested in interested_list {
+            self.interested.push(interested);
+        }
         self
     }
 
-    pub fn factory_stock(&self, name: String, price: f32, qty: u32) -> Stock {
-        Stock {
-            name,
-            price,
-            qty
-        }
+    pub fn get_interested(&self) -> &Vec<Interested> {
+        &self.interested
     }
 
-    pub fn print_broker_details(&self) -> (){
-        let mut total_stocks_price = 0.0;
-        let mut total_stocks_qty: u32 = 0;
-        for (_name, stock) in self.stocks.iter() {
-            total_stocks_qty += stock.qty;
-            total_stocks_price += stock.price;
-        }
+    pub fn get_stocks(&self) -> &HashMap<String, Stock> {
+        &self.stocks
+    }
 
-        self.display.message(format!("I haved {} registered stocks.", total_stocks_qty));
-        self.display.message(format!("My total broker value is: {}", total_stocks_price));
-        return;
+    pub fn get_next_intetion_id(&mut self) -> u32 {
+        self.intention_id += 1;
+        self.intention_id
     }
 }
